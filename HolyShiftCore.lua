@@ -630,7 +630,7 @@ function Atk(CorS,stealthyn,romyn,romcd)
 	end
 
 	if CheckInteractDistance('target',3) ~= 1 then
-		if IsTDebuff('target', 'Spell_Nature_FaerieFire') == false and stealthyn == false then
+		if IsTDebuff('target', 'Spell_Nature_FaerieFire') == false and stealthyn == false and (not IsSpellOnCD("Faerie Fire (Feral)")) and HSAutoFF == 1 then
 			CastSpellByName("Faerie Fire (Feral)(Rank 4)")
 		end
 		if HSBuffChk('Ability_Mount_JungleTiger') == false and UnitMana('Player') >= copobu + 30 and HSTigerUse == 1 then
